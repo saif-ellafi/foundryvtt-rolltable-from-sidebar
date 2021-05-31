@@ -1,7 +1,7 @@
 {
   "name": "rolltable-from-sidebar",
   "title": "Rolltable from sidebar",
-  "description": "<p>Adds a button to roll a rolltable without opening it</p>",
+  "description": "<p>This module allows rolling rollable tables directly from the sidebar.</p>",
   "version": "0.0.1",
   "author": "U~man",
   "scripts": [],
@@ -20,6 +20,6 @@
   "url": "https://gitlab.com/mesfoliesludiques/foundryvtt-rolltable-from-sidebar",
   "manifest": "https://gitlab.com/mesfoliesludiques/foundryvtt-rolltable-from-sidebar/-/raw/master/module.json",
   "download": "https://gitlab.com/mesfoliesludiques/foundryvtt-rolltable-from-sidebar/-/archive/master/foundryvtt-rolltable-from-sidebar-master.zip",
-  "compatibleCoreVersion": "0.7.9",
-  "minimumCoreVersion": "0.8.6"
+  "compatibleCoreVersion": "0.8.6",
+  "minimumCoreVersion": "0.7.9"
 }
