@@ -1,2 +1,4 @@
 # Rolltable From Sidebar for Foundry VTT
-Adds an icon next to roll tables in the rolltable sidebar.
+This module allows to roll Foundry rollable tables directly from the sidebar.
+
+Once the module is enabled, you will see a dice icon next to the rollable table name. Just click on it.
