@@ -6,9 +6,9 @@ Once the module is enabled, you will see a dice icon next to the rollable table 
 ![](preview.gif)
 
 ## Authors
-Originally created by U~Man
+[Originally created by U~Man](https://gitlab.com/mesfoliesludiques/foundryvtt-rolltable-from-sidebar)
 
-Revived and Maintained by JeansenVaars
+Revived and Maintained by **JeansenVaars**
 
 ![JVLogo](logo-small-black.png)
 
