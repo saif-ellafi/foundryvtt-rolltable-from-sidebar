@@ -3,6 +3,8 @@ This module allows rolling Random Tables directly from the sidebar and compendiu
 
 Once the module is enabled, you will see a dice icon next to the rollable table name. Just click on it.
 
+![img.png](img.png)
+
 ![](preview.gif)
 
 ## Authors
