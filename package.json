@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saif-ellafi/foundryvtt-mythic-gme.git"
+    "url": "git+https://github.com/saif-ellafi/foundryvtt-actor-link-indicator.git"
   },
   "keywords": [
     "foundry",
@@ -23,9 +23,9 @@
   "author": "JeansenVaars (Saif Ellafi)",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/-/issues"
+    "url": "https://github.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/issues"
   },
-  "homepage": "https://gitlab.com/saif-ellafi/foundryvtt-rolltable-from-sidebar",
+  "homepage": "https://github.com/saif-ellafi/foundryvtt-rolltable-from-sidebar",
   "devDependencies": {
     "npm-build-zip": "^1.0.3"
   }
