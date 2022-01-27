@@ -9,6 +9,7 @@ Once the module is enabled, you will see a dice icon next to the rollable table 
 Originally created by U~Man
 
 Revived and Maintained by JeansenVaars
+
 ![JVLogo](logo-small-black.png)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V14D3AH)
