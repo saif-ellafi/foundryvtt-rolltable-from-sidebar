@@ -1,1 +1,4 @@
 rolltable-from-sidebar.lock
+/node_modules/
+/dist/
+*.zip

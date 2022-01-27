@@ -1,8 +1,3 @@
-# Changelog
-All notable changes to this project will be documented in this file.
-
-## [0.0.1] - 2021-05-31
-### Added
-Release
-### Changed
-### Removed
+# 1.0.0
+* Patched for compatibility with V9
+* Added a dice roller icon from Roll Table compendium folders

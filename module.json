@@ -1,9 +1,9 @@
 {
   "name": "rolltable-from-sidebar",
-  "title": "Rolltable from sidebar",
-  "description": "This module allows rolling rollable tables directly from the sidebar.",
-  "version": "2.0.0",
-  "author": "U~man",
+  "title": "Roll Table from Sidebar",
+  "description": "This module allows rolling random tables conveniently from the sidebar and compendium folders.",
+  "version": "1.0.0",
+  "authors": ["JeansenVaars", "U~man"],
   "scripts": [],
   "esmodules": ["rolltable.js"],
   "styles": ["rolltable.css"],
@@ -15,9 +15,9 @@
       "path": "lang/en.json"
     }
   ],
-  "url": "https://gitlab.com/mesfoliesludiques/foundryvtt-rolltable-from-sidebar",
-  "manifest": "https://gitlab.com/mesfoliesludiques/foundryvtt-rolltable-from-sidebar/-/raw/master/module.json",
-  "download": "https://gitlab.com/mesfoliesludiques/foundryvtt-rolltable-from-sidebar/-/archive/master/foundryvtt-rolltable-from-sidebar-master.zip",
+  "url": "https://gitlab.com/saif-ellafi/foundryvtt-rolltable-from-sidebar",
+  "manifest": "https://gitlab.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/-/raw/master/module.json",
+  "download": "https://gitlab.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/-/archive/master/foundryvtt-rolltable-from-sidebar-master.zip",
   "compatibleCoreVersion": "9",
   "minimumCoreVersion": "9"
 }
