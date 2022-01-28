@@ -1,3 +1,5 @@
 {
-    "RollTableFromSidebar.Roll": "Roll"
+    "RollTableFromSidebar.Roll": "Roll",
+    "RollTableFromSidebar.Cancel": "Cancel",
+    "RollTableFromSidebar.Warning": "There are too many tables in this folder. Proceed?"
 }
