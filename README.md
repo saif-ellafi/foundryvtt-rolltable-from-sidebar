@@ -1,8 +1,8 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-rolltable-from-sidebar/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-rolltable-from-sidebar/latest/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/saif-ellafi/foundryvtt-rolltable-from-sidebar) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-rolltable-from-sidebar) ![GitHub](https://img.shields.io/github/license/saif-ellafi/foundryvtt-rolltable-from-sidebar)
 # Roll Table From Sidebar for Foundry VTT
-This module allows rolling Random Tables directly from the sidebar and compendium folders. Allows one-click draw from each table on a folder too.
+This module allows one-click draw Rollable Tables directly from the sidebar and compendium folders. Including from entire folders!
 
-![img.png](img.png)
+![img_1.png](img_1.png)
 
 ![](preview.gif)
 
