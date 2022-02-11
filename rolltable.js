@@ -24,6 +24,15 @@ Hooks.on("renderCompendium", (rolltables, html, data) => {
     });
 });
 
+Hooks.on('renderDocumentSheet', (jn) => {
+    if (jn.constructor.name !== 'JournalSheet')
+        return;
+    jn.element.find(".entity-link").contextmenu((elem) => {
+        if (elem.currentTarget.getAttribute('data-entity') === 'RollTable')
+            game.tables.contents.find(t => t.id === elem.currentTarget.getAttribute('data-id')).draw();
+    });
+})
+
 function enrichRollTableSidebar(rollIcon, tables, k) {
     rollIcon.classList.add("roll-table");
     rollIcon.setAttribute("data-action", "roll-table");
@@ -33,7 +42,7 @@ function enrichRollTableSidebar(rollIcon, tables, k) {
     die.classList.add("fa-dice");
     rollIcon.appendChild(die);
     tables[k].appendChild(rollIcon);
-};
+}
 
 function RollTableFromSidebar(event) {
     const tableId = event.currentTarget.parentElement.dataset["documentId"];

@@ -1,7 +1,7 @@
 {
   "name": "rolltable-from-sidebar",
-  "version": "1.1.0",
-  "description": "This module allows rolling random tables conveniently from the sidebar and compendium folders.",
+  "version": "1.2.0",
+  "description": "This module allows rolling random tables conveniently from the sidebar, compendium folders or when right clicking a table link in a Journal.",
   "main": "rolltable.js",
   "scripts": {
     "copy": "mkdir -p dist && cp ./rolltable.js dist/ && cp ./rolltable.css dist/ && cp -r ./lang dist/ && cp ./README.md dist/ && cp ./CHANGELOG.md dist/ && cp ./LICENSE.md dist/ && cp ./module.json dist/ && cp ./THANKS.txt dist/",

@@ -1,3 +1,6 @@
+# 1.2.0
+* Right-Click a Journal Entry link from a journal now also rolls from the random table directly
+
 # 1.1.0
 * Can now roll from folders (Draws once from each table)
 
