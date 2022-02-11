@@ -4,7 +4,13 @@ This module allows one-click draw Rollable Tables directly from the sidebar, com
 
 ![img_1.png](img_1.png)
 
+Direct roll from Sidebar
+
 ![](preview.gif)
+
+(Right-Click from Journal Entries)
+
+![](journal.gif)
 
 ## Authors
 [Originally created by U~Man](https://gitlab.com/mesfoliesludiques/foundryvtt-rolltable-from-sidebar)
