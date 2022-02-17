@@ -1,3 +1,8 @@
+# 1.2.1
+* Fixed a bug where rolling some random table directories wouldn't work
+* Compatibility with GM Screen and various Journal modules
+* Reduced threshold for warning to 5 tables in a folder before automatically rolling
+
 # 1.2.0
 * Right-Click a Journal Entry link from a journal now also rolls from the random table directly
 

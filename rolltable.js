@@ -24,8 +24,21 @@ Hooks.on("renderCompendium", (rolltables, html, data) => {
     });
 });
 
+// Monk's Enhanced Journal Hook
+Hooks.on('activateControls', (jn) => {
+    const name = jn.constructor.name;
+    if (name !== 'EnhancedJournal')
+        return;
+    jn.element.find(".entity-link").contextmenu((elem) => {
+        if (elem.currentTarget.getAttribute('data-entity') === 'RollTable')
+            game.tables.contents.find(t => t.id === elem.currentTarget.getAttribute('data-id')).draw();
+    });
+});
+
 Hooks.on('renderDocumentSheet', (jn) => {
-    if (jn.constructor.name !== 'JournalSheet')
+    const name = jn.constructor.name;
+    // Consider support for OneJournal GMScreen and Monks Enhanced Journal
+    if (name != 'EnhancedJournal' && name !== 'CompactJournalEntryDisplay' && name !== 'JournalSheet' && name !== 'JournalEntrySheet')
         return;
     jn.element.find(".entity-link").contextmenu((elem) => {
         if (elem.currentTarget.getAttribute('data-entity') === 'RollTable')
@@ -61,8 +74,8 @@ function RollTableFromFolder(event) {
     event.preventDefault();
     event.stopPropagation();
     let fid = event.target.parentElement.parentElement.parentElement.dataset.folderId;
-    let tables = game.tables.contents.filter(t => t.folder.id === fid);
-    if (tables.length > 10) {
+    let tables = game.tables.contents.filter(t => t.folder?.id === fid);
+    if (tables.length > 5) {
         let dialog = new Dialog({
             title: 'Warning',
             content: `<div>${game.i18n.localize("RollTableFromSidebar.Warning")}</div>`,
