@@ -3,13 +3,13 @@ Hooks.on("renderRollTableDirectory", (rolltables, html, data) => {
     tables.each((k) => {
         let rollIcon = document.createElement("a");
         enrichRollTableSidebar(rollIcon, tables, k);
-        rollIcon.addEventListener("click", RollTableFromSidebar)
+        rollIcon.addEventListener("click", rollTableFromSidebar)
     });
     const folders = html.find(".folder-header")
     folders.each((k) => {
         let rollIcon = document.createElement("a");
         enrichRollTableSidebar(rollIcon, folders, k);
-        rollIcon.addEventListener("click", RollTableFromFolder)
+        rollIcon.addEventListener("click", rollTableFromFolder)
     });
 });
 
@@ -20,7 +20,7 @@ Hooks.on("renderCompendium", (rolltables, html, data) => {
     tables.each((k) => {
         let rollIcon = document.createElement("a");
         enrichRollTableSidebar(rollIcon, tables, k);
-        rollIcon.addEventListener("click", (event) => RollTableFromCompendium(event, `${data.collection.metadata.package}.${data.collection.metadata.name}`))
+        rollIcon.addEventListener("click", (event) => rollTableFromCompendium(event, `${data.collection.metadata.package}.${data.collection.metadata.name}`))
     });
 });
 
@@ -30,21 +30,29 @@ Hooks.on('activateControls', (jn) => {
     if (name !== 'EnhancedJournal')
         return;
     jn.element.find(".entity-link").contextmenu((elem) => {
-        if (elem.currentTarget.getAttribute('data-entity') === 'RollTable')
-            game.tables.contents.find(t => t.id === elem.currentTarget.getAttribute('data-id')).draw();
+        linkContextDraw(elem.currentTarget);
     });
 });
 
 Hooks.on('renderDocumentSheet', (jn) => {
     const name = jn.constructor.name;
     // Consider support for OneJournal GMScreen and Monks Enhanced Journal
-    if (name != 'EnhancedJournal' && name !== 'CompactJournalEntryDisplay' && name !== 'JournalSheet' && name !== 'JournalEntrySheet')
+    if (!['EnhancedJournal', 'CompactJournalEntryDisplay', 'JournalSheet', 'JournalEntrySheet'].includes(name))
         return;
     jn.element.find(".entity-link").contextmenu((elem) => {
-        if (elem.currentTarget.getAttribute('data-entity') === 'RollTable')
-            game.tables.contents.find(t => t.id === elem.currentTarget.getAttribute('data-id')).draw();
+        linkContextDraw(elem.currentTarget);
     });
 })
+
+function linkContextDraw(target) {
+    if (target.getAttribute('data-entity') === 'RollTable')
+        game.tables.contents.find(t => t.id === target.getAttribute('data-id')).draw();
+    else if (target.getAttribute('data-pack')) {
+        const pack = game.packs.get(target.getAttribute('data-pack'));
+        if (pack?.metadata.type === 'RollTable')
+            pack.getDocuments().then(contents => contents.find(t => t.id === target.getAttribute('data-id')).draw())
+    }
+}
 
 function enrichRollTableSidebar(rollIcon, tables, k) {
     rollIcon.classList.add("roll-table");
@@ -57,20 +65,20 @@ function enrichRollTableSidebar(rollIcon, tables, k) {
     tables[k].appendChild(rollIcon);
 }
 
-function RollTableFromSidebar(event) {
+function rollTableFromSidebar(event) {
     const tableId = event.currentTarget.parentElement.dataset["documentId"];
     const table = game.tables.get(tableId);
     table.draw();
 }
 
-function RollTableFromCompendium(event, pack) {
+function rollTableFromCompendium(event, pack) {
     const tableId = event.currentTarget.parentElement.dataset["documentId"];
     game.packs.get(pack).getDocument(tableId).then(table => {
         table.draw();
     })
 }
 
-function RollTableFromFolder(event) {
+function rollTableFromFolder(event) {
     event.preventDefault();
     event.stopPropagation();
     let fid = event.target.parentElement.parentElement.parentElement.dataset.folderId;

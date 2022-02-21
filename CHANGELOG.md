@@ -1,3 +1,6 @@
+# 1.2.2
+* Can now right-click roll table from a journal link that points to tables in compendium
+
 # 1.2.1
 * Fixed a bug where rolling some random table directories wouldn't work
 * Compatibility with GM Screen and various Journal modules
