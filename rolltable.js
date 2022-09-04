@@ -20,7 +20,7 @@ Hooks.on("renderCompendium", (rolltables, html, data) => {
     tables.each((k) => {
         let rollIcon = document.createElement("a");
         enrichRollTableSidebar(rollIcon, tables, k);
-        rollIcon.addEventListener("click", (event) => rollTableFromCompendium(event, `${data.collection.metadata.package}.${data.collection.metadata.name}`))
+        rollIcon.addEventListener("click", (event) => rollTableFromCompendium(event, `${data.collection.metadata.packageName}.${data.collection.metadata.name}`))
     });
 });
 
@@ -29,28 +29,31 @@ Hooks.on('activateControls', (jn) => {
     const name = jn.constructor.name;
     if (name !== 'EnhancedJournal')
         return;
-    jn.element.find(".entity-link").contextmenu((elem) => {
+    jn.element.find(".content-link").contextmenu((elem) => {
         linkContextDraw(elem.currentTarget);
     });
 });
 
-Hooks.on('renderDocumentSheet', (jn) => {
+Hooks.on('renderJournalTextPageSheet', (jn, element) => {
     const name = jn.constructor.name;
     // Consider support for OneJournal GMScreen and Monks Enhanced Journal
-    if (!['EnhancedJournal', 'CompactJournalEntryDisplay', 'JournalSheet', 'JournalEntrySheet'].includes(name))
+    if (!['JournalTextPageSheet'].includes(name))
         return;
-    jn.element.find(".entity-link").contextmenu((elem) => {
+    element.find(".content-link").contextmenu((elem) => {
         linkContextDraw(elem.currentTarget);
     });
 })
 
 function linkContextDraw(target) {
-    if (target.getAttribute('data-entity') === 'RollTable')
+    if (target.getAttribute('data-type') === 'RollTable')
         game.tables.contents.find(t => t.id === target.getAttribute('data-id')).draw();
     else if (target.getAttribute('data-pack')) {
         const pack = game.packs.get(target.getAttribute('data-pack'));
-        if (pack?.metadata.type === 'RollTable')
-            pack.getDocuments().then(contents => contents.find(t => t.id === target.getAttribute('data-id')).draw())
+        if (pack?.metadata.type === 'RollTable') {
+            pack.getDocuments().then(contents => {
+                contents.find(t => t.id === target.getAttribute('data-id')).draw();
+            })
+        }
     }
 }
 

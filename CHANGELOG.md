@@ -1,3 +1,6 @@
+# 1.3.0
+Support Foundry V10
+
 # 1.2.2
 * Can now right-click roll table from a journal link that points to tables in compendium
 
