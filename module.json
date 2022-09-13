@@ -30,9 +30,9 @@
   "download": "https://github.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/releases/download/1.3.0/rolltable-from-sidebar_1.3.0.zip",
   "changelog": "https://github.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/blob/master/CHANGELOG.md",
   "compatibility": {
-    "minimum": 10,
+    "minimum": "10",
     "verified": "10.284",
-    "maximum": 10
+    "maximum": "10"
   },
   "minimumCoreVersion": "10"
 }
