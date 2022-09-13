@@ -33,5 +33,6 @@
     "minimum": 10,
     "verified": "10.284",
     "maximum": 10
-  }
+  },
+  "minimumCoreVersion": "10"
 }
