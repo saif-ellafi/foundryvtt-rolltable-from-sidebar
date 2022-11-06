@@ -2,7 +2,7 @@
   "name": "rolltable-from-sidebar",
   "title": "Roll Table from Sidebar and Journal",
   "description": "This module allows rolling random tables conveniently from the sidebar, compendium folders or when right clicking a table link in a Journal.",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "author": "JeansenVaars#2857",
   "authors": [
     {
@@ -27,7 +27,7 @@
   ],
   "url": "https://github.com/saif-ellafi/foundryvtt-rolltable-from-sidebar.git",
   "manifest": "https://github.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/releases/latest/download/module.json",
-  "download": "https://github.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/releases/download/1.3.0/rolltable-from-sidebar_1.3.0.zip",
+  "download": "https://github.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/releases/download/1.3.1/rolltable-from-sidebar_1.3.1.zip",
   "changelog": "https://github.com/saif-ellafi/foundryvtt-rolltable-from-sidebar/blob/master/CHANGELOG.md",
   "compatibility": {
     "minimum": "10",

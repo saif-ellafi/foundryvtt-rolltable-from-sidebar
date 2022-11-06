@@ -45,16 +45,15 @@ Hooks.on('renderJournalTextPageSheet', (jn, element) => {
 })
 
 function linkContextDraw(target) {
-    if (target.getAttribute('data-type') === 'RollTable')
-        game.tables.contents.find(t => t.id === target.getAttribute('data-id')).draw();
-    else if (target.getAttribute('data-pack')) {
+    if (target.getAttribute('data-pack')) {
         const pack = game.packs.get(target.getAttribute('data-pack'));
         if (pack?.metadata.type === 'RollTable') {
             pack.getDocuments().then(contents => {
                 contents.find(t => t.id === target.getAttribute('data-id')).draw();
             })
         }
-    }
+    } else if (target.getAttribute('data-type') === 'RollTable')
+        game.tables.contents.find(t => t.id === target.getAttribute('data-id')).draw();
 }
 
 function enrichRollTableSidebar(rollIcon, tables, k) {
