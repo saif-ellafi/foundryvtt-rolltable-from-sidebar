@@ -1,3 +1,6 @@
+# 1.4.0
+* Support Foundry V11
+
 # 1.3.1
 * Fixed rolling in journals from compendium (thanks @Abrandau)
 
